@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
-from flask import Flask,render_template,url_for,request
+from streamlit import Streamlit,render_template,url_for,request
 import pickle
 import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
@@ -10,7 +10,7 @@ from nltk.corpus import stopwords
 # load the model from disk
 clf = pickle.load(open('xgb.pkl', 'rb'))
 cv=pickle.load(open('tfidf.pkl','rb'))
-app = Flask(__name__)
+app = Streamlit(__name__)
 def preprocess(text):
     
     # Convert text to lowercase
