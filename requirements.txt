@@ -1,9 +1,9 @@
 pandas
 numpy
 regex
-nltk
 scikit-learn
 sklearn
+nltk
 spacy
 textblob
 contractions
